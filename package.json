@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/eeshaan/showerbuddies#readme",
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^6.0.12",
+    "water-flow-sensor": "^1.0.1"
   }
 }
