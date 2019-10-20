@@ -1,25 +1,12 @@
-h1 {
-  font-family: 'Reem Kufi', sans-serif;
-}
-.main{
-  margin-left: 1em;
-  margin-bottom: 0em;
-}
-.text{
-  margin-left: 1em;
-}
-
-#text{
-  display: flex;
-  justify-content: center;
-  margin-left: 1em;
-}
-
 body {
   height: 100%;
   font-family: 'Red Hat Text', sans-serif;
   color: #fff;
   background: #3FB9C0;
+}
+
+h1 {
+  font-family: 'Reem Kufi', sans-serif;
 }
 
 .container {
@@ -30,7 +17,6 @@ body {
 }
 
 .grid {
-  
   margin: 1em;
   margin-top: 0em;
   width: 100%;
@@ -39,9 +25,23 @@ body {
 .row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;  
-   /* it changes by screen size actually */
+  justify-content: space-around;
+  /* it changes by screen size actually */
+}
 
+.main {
+  margin-left: 1em;
+  margin-bottom: 0em;
+}
+
+.text {
+  margin-left: 1em;
+}
+
+#text {
+  display: flex;
+  justify-content: center;
+  margin-left: 1em;
 }
 
 .box {
