@@ -14,7 +14,8 @@ function wfsCb(res) {
 console.info(`Sensor is running: ${sensor.isRunning}`)
 console.info(`Flow rate: ${sensor.flow} L/min`)
 console.info(`Volume: ${sensor.volume} L`)
-
+// console.info(`Flow rate: ${0.2641720524*sensor.flow} gal/min`)
+// console.info(`Volume: ${0.2641720524*sensor.volume} gal`)
 
 app.get('/', (req, res) => {
 	console.log('YOOOO');
