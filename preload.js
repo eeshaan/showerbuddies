@@ -19,6 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
     replaceText(`time`, "this afternoon")
   if (hour >= 18 && hour <= 20)
     replaceText(`time`, "this evening")
-  if (hour >= 21 && hour <= 4)
+  if (hour >= 21 || hour <= 4)
     replaceText(`time`, "tonight")
 })
