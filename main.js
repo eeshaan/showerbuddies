@@ -16,32 +16,33 @@ function createWindow () {
     }
   })
 
-  const request = net.request({
-    method: 'GET',
-    protocol: 'http:',
-    hostname: '169.254.128.249',
-    port: 3100,
-    path: '/'
-  });
-
-  const parsedData = '';
-
+ 
+  var snsrRunning = false;
+  var parsedData = {};
+  let timer = null;
   const getRequest = () => {
+    const request = net.request({
+      method: 'GET',
+      protocol: 'http:',
+      hostname: '169.254.128.249',
+      port: 3100,
+      path: '/'
+    });
     request.on('response', (response) => {
-      //console.log(response);
       response.on('data', (data) => {
         const realData = data.toString();
-        const parsedData = JSON.parse(realData);
-        console.log(parsedData);
+        parsedData = JSON.parse(realData);
       });
     });
-    // if(!parsedData.running){
-    //   clearInterval(timer);
-    // }
-    request.removeListeners('response');
+    if(!snsrRunning && parsedData.running)
+      snsrRunning = true;
+    if(snsrRunning && !parsedData.running){
+      clearInterval(timer);
+    }
+    request.end();
   }
-  var timer = setInterval(getRequest(), 1000)
-  request.end();
+  timer = setInterval(getRequest, 5000)
+  
 
 
   // and load the index.html of the app.
