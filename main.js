@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, net} = require('electron')
 const path = require('path')
 
 // Keep a global reference of the window object, if you don't, the window will
@@ -15,6 +15,34 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+
+  const request = net.request({
+    method: 'GET',
+    protocol: 'http:',
+    hostname: '169.254.128.249',
+    port: 3100,
+    path: '/'
+  });
+
+  const parsedData = '';
+
+  const getRequest = () => {
+    request.on('response', (response) => {
+      //console.log(response);
+      response.on('data', (data) => {
+        const realData = data.toString();
+        const parsedData = JSON.parse(realData);
+        console.log(parsedData);
+      });
+    });
+    // if(!parsedData.running){
+    //   clearInterval(timer);
+    // }
+    request.removeListeners('response');
+  }
+  var timer = setInterval(getRequest(), 1000)
+  request.end();
+
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
