@@ -18,6 +18,6 @@ console.info(`Volume: ${0.2641720524*sensor.volume} gal`)
 
 
 app.get('/', (req, res) => {
-	res.json({flow: sensor.flow, volume: sensor.volume, running: sensor.isRunning});
+	res.json({flow: 0.2641720524*sensor.flow, volume: 0.2641720524*sensor.volume, running: sensor.isRunning});
 });
 app.listen(port, () => {console.log('Listening!')});
