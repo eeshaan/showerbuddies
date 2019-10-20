@@ -1,16 +1,58 @@
-body {
-  font-family: 'Red Hat Text', sans-serif;
-  color: #fff;
-  background: #3FB9C0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
 h1 {
   font-family: 'Reem Kufi', sans-serif;
 }
+.main{
+  margin-left: 1em;
+  margin-bottom: 0em;
+}
+.text{
+  margin-left: 1em;
+}
 
-.main {
-  margin: 25px;
+#text{
+  display: flex;
+  justify-content: center;
+  margin-left: 1em;
+}
+
+body {
+  height: 100%;
+  font-family: 'Red Hat Text', sans-serif;
+  color: #fff;
+  background: #3FB9C0;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  
+  margin: 1em;
+  margin-top: 0em;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;  
+   /* it changes by screen size actually */
+
+}
+
+.box {
+  vertical-align: center;
+  background-color: #d1ffff;
+  text-align: center;
+  color: black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1em;
+  width: 33%;
 }
