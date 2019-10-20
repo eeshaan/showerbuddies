@@ -2,10 +2,11 @@
   "name": "showerbuddies",
   "version": "1.0.0",
   "description": "raspberry pi app to monitor water usage in the shower",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "sensor": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,10 @@
   "devDependencies": {
     "electron": "^6.0.12",
     "water-flow-sensor": "^1.0.1"
+  },
+  "dependencies": {
+    "electron-rebuild": "^1.8.6",
+    "express": "^4.17.1",
+    "spectre.css": "^0.5.8"
   }
 }
