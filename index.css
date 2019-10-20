@@ -10,3 +10,7 @@ body {
 h1 {
   font-family: 'Reem Kufi', sans-serif;
 }
+
+.main {
+  margin: 25px;
+}
