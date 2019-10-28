@@ -18,7 +18,7 @@ When initially trying to run both the client and server-side code on the Raspber
 
 ## What we learned
 - practical application of sockets, servers, and general networking
-- the ins-and-out of Node.js and JavaScript frameworks
+- the ins-and-outs of Node.js and JavaScript frameworks
 
 ## What's next for ShowerBuddies
 The next step for ShowBuddies is to integrate it into a desktop application using Electron JS. In addition, we would like to implement user specific information, and more statistics on water usage from showering.
