@@ -1,3 +1,7 @@
+<p align="left">
+  <img src="./.github/logo.png" width="350" title="hover text">
+</p>
+
 # ShowerBuddies
 A Raspberry Pi app to monitor water usage in the shower.
 
